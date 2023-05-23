@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
-service = Service(r'C:\Users\SpencerVedenoff\Documents\Python Projects\ChromeDriver\chromedriver.exe')
+service = Service(r'C:\path\to\chrome\driver')
 
 def get_driver():
     options = webdriver.ChromeOptions()
@@ -19,7 +19,7 @@ def get_driver():
 
 def main():
     driver = get_driver()
-    element = driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div[2]/div/div[1]/div[4]/table/tbody/tr[1]/td[4]/div").text
+    element = driver.find_element(By.XPATH, "Full Xpath").text #Full Xpath is not actually "Full Xpath" this is just a placeholder
     return element
 
 print(main())
